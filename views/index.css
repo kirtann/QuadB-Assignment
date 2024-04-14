@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap");
+@import url("https://fonts.cdnfonts.com/css/asterone-demo");
+html {
+  background-color: #191d28;
+}
+
+h5 {
+  color: #2e3241;
+}
+
+/* Navbar styles */
+.navbar-cust {
+  background-color: #191d28;
+  overflow: hidden;
+  top: 0;
+  width: 100%;
+}
+
+.navbar-logo {
+  float: left;
+  width: 35%;
+  padding: 15px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #6ccacb;
+}
+
+.site-name {
+  font-size: 3rem;
+  padding: 10px;
+  font-family: "Asterone DEMO", sans-serif;
+}
+
+.navbar-middle {
+  float: left;
+  width: 50%;
+  text-align: center;
+}
+
+.navbar-button {
+  -webkit-border-radius: 12;
+  -moz-border-radius: 12;
+  border-radius: 12px;
+  font-family: "Asterone DEMO", monospace;
+  display: inline-block;
+  color: #ffffff;
+  font-size: 16px;
+  background: #2e3241;
+  padding: 10px 20px 10px 20px;
+  margin-right: 20px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.navbar-button:hover {
+  background: #545b62;
+  text-decoration: none;
+}
+
+.navbar-button-contact {
+  -webkit-border-radius: 12;
+  text-align: center;
+  -moz-border-radius: 12;
+  border-radius: 12px;
+  font-family: "Roboto Mono", monospace;
+  display: inline-block;
+  color: #ffffff;
+  background: #3dc6c1;
+  padding: 10px;
+  margin-right: 2rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.navbar-end {
+  float: right;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.theme-toggle-align {
+  padding-left: 130px;
+}
+
+.navbar-progress {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #6ccacb;
+}
+
+.navbar-toggle {
+  display: inline-block;
+  background-color: #6ccacb;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
