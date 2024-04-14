@@ -112,6 +112,62 @@
       </div>
     </nav>
 
+    <!-- center details container -->
+    <div class="details-container">
+      <div
+        class="d-flex justify-content-around align-items-center small-header"
+      >
+        <div class="text-center">
+          <div
+            class="small-header-percentage"
+            style="color: #6ccacb; font-size: xx-large"
+          >
+            0.1 %
+          </div>
+          <div class="small-header-time">5 Mins</div>
+        </div>
+        <div class="text-center center-div">
+          <div
+            class="small-header-percentage"
+            style="color: #6ccacb; font-size: xx-large"
+          >
+            0.96 %
+          </div>
+          <div class="small-header-time">1 Hour</div>
+        </div>
+        <div class="text-center center-block">
+          <div class="center-text">
+            <span class="subText-heading">Best Price to Trade</span>
+          </div>
+          <div class="amount">
+            ₹ <%= averagePrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+            %>
+          </div>
+          <div class="center-text" style="font-size: smaller">
+            Average <%= data[0].name%> net price including commission
+          </div>
+        </div>
+        <div class="text-center">
+          <div
+            class="small-header-percentage"
+            style="color: #6ccacb; font-size: xx-large"
+          >
+            2.73 %
+          </div>
+          <div class="small-header-time">1 Day</div>
+        </div>
+        <div class="text-center">
+          <div
+            class="small-header-percentage"
+            style="color: #6ccacb; font-size: xx-large"
+          >
+            7.51%
+          </div>
+          <div class="small-header-time">7 Days</div>
+        </div>
+      </div>
+    </div>
+
     <script>
       var timer = 60;
       const timerD = document.getElementById("timer");
