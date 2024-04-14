@@ -25,7 +25,7 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-light navbar-cust navbar-expand-lg">
+    <nav id="navbar-cust" class="navbar navbar-cust navbar-expand-lg">
         <div class="container-fluid">
             <a class="navbar-logo site-name" href="#">HODLINFO</a>
             <button style="border-color: white;" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -55,14 +55,15 @@
                     </li>
                     <li class="nav-item">
                         <label style="display: flex;" class="custom-control teleport-switch">
-                            <span style="color:#3dc6c1;" class="teleport-switch-control-description material-symbols-outlined">
-                                light_mode
-                            </span>
-                            <input type="checkbox" class="teleport-switch-control-input" checked="">
+                          <span style="color:#3dc6c1;" class="teleport-switch-control-description material-symbols-outlined">
+                            dark_mode
+                        </span>
+                            <input type="checkbox" class="teleport-switch-control-input" id="checkbox" checked="">
                             <span class="teleport-switch-control-indicator"></span>
                             <span style="color:#3dc6c1;" class="teleport-switch-control-description material-symbols-outlined">
-                                dark_mode
-                            </span>
+                              light_mode
+                          </span>
+                            
                         </label>
                     </li>
                 </ul>
@@ -71,7 +72,7 @@
     </nav>
 
     <!-- center details container -->
-    <div class="details-container">
+    <div id="details-container" class="details-container">
         <div class="d-flex justify-content-around align-items-center small-header">
             <div class="text-center">
                 <div class="small-header-percentage" style="color: #6ccacb; font-size: xx-large;">0.1 %</div>
@@ -85,7 +86,7 @@
                 <div class="center-text">
                     <span class="subText-heading">Best Price to Trade</span>
                 </div>
-                <div class="amount">₹ <%= averagePrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')  %></div> 
+                <div id = "amount" class="amount">₹ <%= averagePrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')  %></div> 
                 <div class="center-text" style="font-size:smaller;">Average <%= data[0].name%> net price including commission</div>
             </div>
             <div class="text-center">
@@ -166,6 +167,16 @@
     </div>
 
     <script> 
+        const checkbox = document.getElementById("checkbox")
+        checkbox.addEventListener("change", () => {
+          document.body.classList.toggle("dark")
+          document.getElementById("navbar-cust").classList.toggle("dark")
+          const ele = document.querySelectorAll("th, tr, td, .table-alter, #amount, #details-container, .navbar-button, .footer, .footer-botton-back")
+          ele.forEach((e) => {
+            e.classList.toggle("dark")
+          })
+          
+        })
         var timer = 60
         const timerD = document.getElementById("timer");
         setInterval(()=>{
