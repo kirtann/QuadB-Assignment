@@ -39,4 +39,20 @@ const getTickers = async (req, res) => {
   }
 };
 
-module.exports = { fetchTickers, getTickers };
+const deleteAllTickers = async (req, res) => {
+  try {
+    await Ticker.deleteMany();
+    res.status(200).json({
+      success: true,
+      message: "All tickers deleted in the database",
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({
+      success: false,
+      message: "Error deleting tickers",
+    });
+  }
+};
+
+module.exports = { fetchTickers, getTickers, deleteAllTickers };

@@ -1,5 +1,9 @@
 const express = require("express");
-const { fetchTickers, getTickers } = require("../controllers/tickerController");
+const {
+  fetchTickers,
+  getTickers,
+  deleteAllTickers,
+} = require("../controllers/tickerController");
 
 const router = express.Router();
 
@@ -8,5 +12,7 @@ router.route("/").get(getTickers);
 
 // Define route to fetch data from WazirX API
 router.route("/tickers").get(fetchTickers);
+
+router.route("/ticker/delete").delete(deleteAllTickers);
 
 module.exports = router;
